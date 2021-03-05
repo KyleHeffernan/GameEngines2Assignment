@@ -5,7 +5,7 @@ DT211C/4
 
 # STORYBOARD FOR THE SCENE
 
-![Screenshot](/images/screenshot_1.png)
+![Screenshot](/images/Screenshot_1.png)
 ![Screenshot](/images/screenshot_2.png)
 ![Screenshot](/images/screenshot_3.png)
 ![Screenshot](/images/screenshot_4.png)
