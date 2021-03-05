@@ -5,18 +5,18 @@ DT211C/4
 
 # STORYBOARD FOR THE SCENE
 
-![Screenshot](screenshot_1.png)
-![Screenshot](screenshot_2.png)
-![Screenshot](screenshot_3.png)
-![Screenshot](screenshot_4.png)
-![Screenshot](screenshot_5.png)
-![Screenshot](screenshot_6.png)
-![Screenshot](screenshot_7.png)
-![Screenshot](screenshot_8.png)
-![Screenshot](screenshot_9.png)
-![Screenshot](screenshot_10.png)
-![Screenshot](screenshot_11.png)
-![Screenshot](screenshot_12.png)
+![Screenshot](/images/screenshot_1.png)
+![Screenshot](/images/screenshot_2.png)
+![Screenshot](/images/screenshot_3.png)
+![Screenshot](/images/screenshot_4.png)
+![Screenshot](/images/screenshot_5.png)
+![Screenshot](/images/screenshot_6.png)
+![Screenshot](/images/screenshot_7.png)
+![Screenshot](/images/screenshot_8.png)
+![Screenshot](/images/screenshot_9.png)
+![Screenshot](/images/screenshot_10.png)
+![Screenshot](/images/screenshot_11.png)
+![Screenshot](/images/screenshot_12.png)
 
 
 
