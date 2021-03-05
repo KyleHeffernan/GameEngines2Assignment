@@ -9,7 +9,7 @@ DT211C/4
 The scene will start in the Milano with some audio explaining that rocket just stole
 batteries from the Sovereign before they left. As they talk, there is an impact at the back of the ship.
 ![Screenshot](/images/Screenshot_2.png)
-They see the Sovereign fleet is behind them, announcing that they know they stole the batteries, but rocket keeps flying away and the fleet opens fire at the Milano.
+They see the Sovereign fleet is behind them, announcing that they know they stole the batteries, but rocket keeps flying away and the fleet opens fire at the Milano. A chase begins and the camera follows.
 ![Screenshot](/images/Screenshot_4.png)
 Many shots are fired and Rocket starts firing back at the ships while dodging projectiles.
 ![Screenshot](/images/Screenshot_5.png)
@@ -17,7 +17,7 @@ They realise the ships are just pilotless drones.
 ![Screenshot](/images/Screenshot_3.png)
 More ships fly in from in front.
 ![Screenshot](/images/Screenshot_6.png)
-The Sovereign get annoyed and decide they want to just kill the guardians rather than retrieving the battery.
+Cut to the Sovereign getting annoyed and deciding they want to just kill the guardians rather than retrieving the battery.
 ![Screenshot](/images/Screenshot_7.png)
 The Milano continues to dodge projectiles as Peter and Rocket argue and switch control of the Milano back and forth.
 ![Screenshot](/images/Screenshot_8.png)
