@@ -11,6 +11,7 @@ public class Path : MonoBehaviour {
 
     public void OnDrawGizmos()
     {
+        /*
         int count = looped ? (transform.childCount + 1) : transform.childCount;
         Gizmos.color = Color.cyan;
         for (int i = 1; i < count; i++)
@@ -21,6 +22,7 @@ public class Path : MonoBehaviour {
             Gizmos.DrawSphere(prev.position, 1);
             Gizmos.DrawSphere(next.position, 1);
         }
+        */
     }
 
 	// Use this for initialization
