@@ -21,7 +21,7 @@ class PursueShip : State
         }
         */
         Vector3 toEnemy = owner.GetComponent<AttackShip>().milano.transform.position - owner.transform.position;
-        if (Vector3.Angle(owner.transform.forward, toEnemy) < 40 && toEnemy.magnitude < 80)
+        if (Vector3.Angle(owner.transform.forward, toEnemy) < 50 && toEnemy.magnitude < 200)
         {
             GameObject bullet = GameObject.Instantiate(owner.GetComponent<AttackShip>().bullet, owner.transform.position + owner.transform.forward * 2, owner.transform.rotation);       
         }
