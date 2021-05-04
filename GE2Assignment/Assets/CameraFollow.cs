@@ -18,10 +18,6 @@ public class CameraFollow : MonoBehaviour
   
       void  LateUpdate ()
       {
-          // Early out if we don't have a target
-          if (!target)
-              return;
-      
          Vector3 followpos = new Vector3(0.0f, height, -distance);
          Quaternion lookrotation = Quaternion.identity;
     
