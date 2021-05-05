@@ -28,9 +28,11 @@ public class DroneController : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("drone was hit");
         
-        
-        Instantiate(explosion, transform.position, transform.rotation);
+        GameObject explosionObj = Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(explosionObj.gameObject, 3);
+
         Destroy (this.gameObject);
     }
     

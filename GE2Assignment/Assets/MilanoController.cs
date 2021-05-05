@@ -29,7 +29,9 @@ public class MilanoController : MonoBehaviour
         //Debug.Log(other);
         if(lastHit < Time.time - 2)
         {
-            Instantiate(explosion, transform.position, transform.rotation);
+            GameObject explosionObj = Instantiate(explosion, transform.position, transform.rotation);
+            Destroy(explosionObj.gameObject, 3);
+            
             //Destroy (this.gameObject);
             lastHit = Time.time;
         }
