@@ -19,7 +19,7 @@ public class DroneController : MonoBehaviour
 
     System.Collections.IEnumerator DroneActivation()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(2.0f);
         //Starts the drone in pursue state
         GetComponent<StateMachine>().ChangeState(new PursueShip());
     }

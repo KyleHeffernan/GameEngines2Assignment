@@ -24,9 +24,9 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3.0f);
         fleet1.SetActive(true);
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.3f);
         fleet2.SetActive(true);
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.3f);
         fleet3.SetActive(true);
         yield return new WaitForSeconds(3.0f);
         mainCam.GetComponent<CameraFollow>().enabled = true;
