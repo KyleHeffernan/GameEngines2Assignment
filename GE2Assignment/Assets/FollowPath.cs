@@ -7,7 +7,7 @@ public class FollowPath : SteeringBehaviour {
 
     public Path path;
 
-    Vector3 nextWaypoint;
+    public Vector3 nextWaypoint;
 
     public float waypointDistance = 5;
 
