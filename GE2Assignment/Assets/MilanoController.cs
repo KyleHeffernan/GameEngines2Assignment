@@ -5,6 +5,11 @@ using UnityEngine;
 public class MilanoController : MonoBehaviour
 {
     public GameObject bulletSpawn;
+
+    public GameObject explosion;
+
+    public float lastHit = 0;
+
     public bool shot = false;
     // Start is called before the first frame update
     void Start()
@@ -21,5 +26,16 @@ public class MilanoController : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         shot = true;
+        //Debug.Log(other);
+        if(lastHit < Time.time - 2)
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+            //Destroy (this.gameObject);
+            lastHit = Time.time;
+        }
+        
     }
+
+    
+
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DroneController : MonoBehaviour
 {
+    public GameObject explosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,14 @@ public class DroneController : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         //Starts the drone in pursue state
         GetComponent<StateMachine>().ChangeState(new PursueShip());
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        
+        
+        Instantiate(explosion, transform.position, transform.rotation);
+        Destroy (this.gameObject);
     }
     
 }
