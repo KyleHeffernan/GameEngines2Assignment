@@ -6,6 +6,14 @@ public class GameManager : MonoBehaviour
 {
     public GameObject mainCam;
 
+    public bool runOnce = true;
+
+    public GameObject shockwave;
+
+    public GameObject egoShip;
+
+    public GameObject milano;
+
     public GameObject fleet1;
 
     public GameObject fleet2;
@@ -23,6 +31,22 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawnFleet());
 
     }
+
+    void Update()
+    {
+        if(milano.transform.position.z < -640)
+        {
+            if(runOnce == true)
+            {
+                GameObject shockwaveObj = Instantiate(shockwave, egoShip.transform.position, egoShip.transform.rotation);
+                Destroy(shockwaveObj.gameObject, 3);
+                runOnce = false;
+            }
+
+        }
+
+    }
+
 
     System.Collections.IEnumerator SpawnFleet()
     {
