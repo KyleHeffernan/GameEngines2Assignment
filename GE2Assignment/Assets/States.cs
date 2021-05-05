@@ -3,6 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
+class WaitState : State
+{
+    public override void Enter()
+    {
+        //owner.GetComponent<FollowPath>().enabled = true;
+    }
+
+    public override void Think()
+    {
+        /*
+        if (Vector3.Distance(
+            owner.GetComponent<Fighter>().enemy.transform.position,
+            owner.transform.position) < 10)
+        {
+            owner.ChangeState(new DefendState());
+        }
+        */
+        Vector3 toEnemy = owner.GetComponent<AttackShip>().milano.transform.position - owner.transform.position;
+        if (Vector3.Angle(owner.transform.forward, toEnemy) < 50 && toEnemy.magnitude < 200)
+        {
+            GameObject bullet = GameObject.Instantiate(owner.GetComponent<AttackShip>().bullet, owner.transform.position + owner.transform.forward * 2, owner.transform.rotation);       
+        }
+
+    }
+
+    public override void Exit()
+    {
+        owner.GetComponent<FollowPath>().enabled = true;
+    }
+}
+
+class FleeState: State
+{
+    
+}
+
 class PursueShip : State
 {
     public override void Enter()
