@@ -14,20 +14,20 @@ class WaitState : State
     public override void Think()
     {
         /*
-        if (Vector3.Distance(
-            owner.GetComponent<Fighter>().enemy.transform.position,
-            owner.transform.position) < 10)
+        MeshCollider milanoCollider = owner.GetComponent<MeshCollider>();
+        if(milanoCollider.isTrigger == true)
         {
-            owner.ChangeState(new DefendState());
+            owner.ChangeState(new FleeState());
         }
         */
-        Vector3 toEnemy = owner.GetComponent<AttackShip>().milano.transform.position - owner.transform.position;
-        if (Vector3.Angle(owner.transform.forward, toEnemy) < 50 && toEnemy.magnitude < 200)
+        if(owner.GetComponent<MilanoController>().shot == true)
         {
-            GameObject bullet = GameObject.Instantiate(owner.GetComponent<AttackShip>().bullet, owner.transform.position + owner.transform.forward * 2, owner.transform.rotation);       
+            owner.ChangeState(new FleeState());
         }
 
     }
+
+    
 
     public override void Exit()
     {
@@ -37,7 +37,7 @@ class WaitState : State
 
 class FleeState: State
 {
-    
+
 }
 
 class PursueShip : State

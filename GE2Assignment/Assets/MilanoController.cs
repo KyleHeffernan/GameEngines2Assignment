@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MilanoController : MonoBehaviour
 {
+    public bool shot = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +16,9 @@ public class MilanoController : MonoBehaviour
     void Update()
     {
         
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        shot = true;
     }
 }
