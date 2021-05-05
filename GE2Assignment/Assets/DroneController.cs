@@ -7,8 +7,8 @@ public class DroneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Starts the dog in the Go To Player State
-        GetComponent<StateMachine>().ChangeState(new PursueShip());
+        StartCoroutine(DroneActivation());
+        
     }
 
     // Update is called once per frame
@@ -16,4 +16,12 @@ public class DroneController : MonoBehaviour
     {
         
     }
+
+    System.Collections.IEnumerator DroneActivation()
+    {
+        yield return new WaitForSeconds(3.0f);
+        //Starts the drone in pursue state
+        GetComponent<StateMachine>().ChangeState(new PursueShip());
+    }
+    
 }

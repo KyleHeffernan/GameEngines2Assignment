@@ -44,7 +44,7 @@ class PursueShip : State
 {
     public override void Enter()
     {
-        //owner.GetComponent<FollowPath>().enabled = true;
+        owner.GetComponent<OffsetPursue>().enabled = true;
     }
 
     public override void Think()
