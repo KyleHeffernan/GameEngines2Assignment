@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject fleet3;
 
+    public GameObject fleet4;
+
+    public GameObject fleet5;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,10 @@ public class GameManager : MonoBehaviour
         fleet2.SetActive(true);
         yield return new WaitForSeconds(0.3f);
         fleet3.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        fleet4.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        fleet5.SetActive(true);
         yield return new WaitForSeconds(3.0f);
         mainCam.GetComponent<CameraFollow>().enabled = true;
 
