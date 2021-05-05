@@ -1324,6 +1324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bc669e4babaab40895a940f5990d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletSpawn: {fileID: 506358617}
   shot: 0
 --- !u!65 &285654496
 BoxCollider:
@@ -1354,6 +1355,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &285654498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285654489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d210ae276b39749b89cae53d3ab23f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 4750711081181419874, guid: 4ba145fc5e2fa484d8a7ed064f00d770, type: 3}
+  milano: {fileID: 382549168}
 --- !u!1001 &300438954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2366,6 +2381,36 @@ PrefabInstance:
       objectReference: {fileID: 285654489}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b6a6ff60666b0e4bbb1701c1e54c845, type: 3}
+--- !u!1 &506358617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 506358618}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &506358618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506358617}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 285654490}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &510632329
 PrefabInstance:
   m_ObjectHideFlags: 0

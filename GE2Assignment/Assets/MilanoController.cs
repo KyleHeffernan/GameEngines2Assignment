@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MilanoController : MonoBehaviour
 {
+    public GameObject bulletSpawn;
     public bool shot = false;
     // Start is called before the first frame update
     void Start()
