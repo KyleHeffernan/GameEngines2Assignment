@@ -6,6 +6,8 @@ public class DroneController : MonoBehaviour
 {
     public GameObject explosion;
 
+    public bool deathCheck = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,10 @@ public class DroneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(deathCheck == true)
+        {
+            DestroyShip();
+        }
     }
 
     System.Collections.IEnumerator DroneActivation()
@@ -29,10 +34,14 @@ public class DroneController : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         //Debug.Log("drone was hit");
+        DestroyShip();
         
+    }
+
+    public void DestroyShip()
+    {
         GameObject explosionObj = Instantiate(explosion, transform.position, transform.rotation);
         Destroy(explosionObj.gameObject, 3);
-
         Destroy (this.gameObject);
     }
     

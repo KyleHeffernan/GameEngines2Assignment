@@ -55,9 +55,15 @@ class FleeState: State
         //Debug.Log(owner.transform.position.z);
         if(owner.transform.position.z < -660)
         {
-            Debug.Log("Destination reached");
+            //Debug.Log("Destination reached");
+            owner.ChangeState(new EscapedState());
 
         }
+    }
+
+    public override void Exit()
+    {
+        owner.GetComponent<FollowPath>().enabled = false;
     }
 
 }
@@ -83,6 +89,12 @@ class PursueShip : State
             GameObject bullet = GameObject.Instantiate(owner.GetComponent<AttackShip>().bullet, owner.transform.position + owner.transform.forward * 2, owner.transform.rotation);       
         }
         
+        if(owner.GetComponent<AttackShip>().milano.transform.position.z < -660)
+        {
+            //Debug.Log("Destination reached");
+            owner.ChangeState(new DeathState());
+
+        }
 
 
     }
@@ -91,4 +103,13 @@ class PursueShip : State
     {
         //owner.GetComponent<FollowPath>().enabled = false;
     }
+}
+
+class DeathState : State
+{
+    public override void Enter()
+    {
+        owner.GetComponent<DroneController>().deathCheck = true;
+    }
+
 }
