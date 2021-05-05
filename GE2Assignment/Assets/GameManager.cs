@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject cameraEndPos;
     public GameObject mainCam;
 
     public bool runOnce = true;
@@ -43,6 +44,13 @@ public class GameManager : MonoBehaviour
                 runOnce = false;
             }
 
+        }
+
+        if(milano.transform.position.z < -600)
+        {
+            mainCam.GetComponent<CameraFollow>().enabled = false;
+            mainCam.transform.position = cameraEndPos.transform.position;
+            mainCam.transform.rotation = cameraEndPos.transform.rotation;
         }
 
     }
