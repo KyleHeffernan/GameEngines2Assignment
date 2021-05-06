@@ -152,7 +152,7 @@ public class GameManager : MonoBehaviour
     System.Collections.IEnumerator EndScene()
     {
         
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.8f);
         AudioSource audio = this.GetComponent<AudioSource>();
         audio.Stop();
         rawimage1.SetActive(false);
