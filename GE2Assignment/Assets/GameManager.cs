@@ -73,10 +73,11 @@ public class GameManager : MonoBehaviour
         AudioSource audio = this.GetComponent<AudioSource>();
         audio.Play();
         videoEnd = true;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         videoPlayer.SetActive(false);
         
         yield return new WaitForSeconds(5.0f);
+        
         GameObject shockwaveObj1 = Instantiate(miniShockwave, fleet1.transform.position, fleet1.transform.rotation);
         Destroy(shockwaveObj1.gameObject, 3);
         fleet1.SetActive(true);
@@ -110,8 +111,10 @@ public class GameManager : MonoBehaviour
         GameObject shockwaveObj7 = Instantiate(miniShockwave, fleet7.transform.position, fleet7.transform.rotation);
         Destroy(shockwaveObj7.gameObject, 3);
         fleet7.SetActive(true);
+        mainCam.transform.parent = null;
 
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(1.0f);
+        
         mainCam.GetComponent<CameraFollow>().enabled = true;
 
         

@@ -20,7 +20,8 @@ class WaitState : State
 {
     public override void Enter()
     {
-        //owner.GetComponent<FollowPath>().enabled = true;
+        owner.GetComponent<FollowPath>().enabled = true;
+        owner.GetComponent<Boid>().maxSpeed = 20;
     }
 
     public override void Think()
@@ -32,6 +33,7 @@ class WaitState : State
             owner.ChangeState(new FleeState());
         }
         */
+        
         if(owner.GetComponent<MilanoController>().shot == true)
         {
             owner.ChangeState(new FleeState());
@@ -43,7 +45,7 @@ class WaitState : State
 
     public override void Exit()
     {
-        owner.GetComponent<FollowPath>().enabled = true;
+        owner.GetComponent<Boid>().maxSpeed = 100;
     }
 }
 
