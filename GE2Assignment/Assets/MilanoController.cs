@@ -10,12 +10,14 @@ public class MilanoController : MonoBehaviour
 
     public float lastHit = 0;
 
+    public GameObject canvas;
+
     public bool shot = false;
     // Start is called before the first frame update
     void Start()
     {
         //Starts the dog in the Go To Player State
-        GetComponent<StateMachine>().ChangeState(new WaitState());
+        GetComponent<StateMachine>().ChangeState(new IdleState());
     }
 
     // Update is called once per frame

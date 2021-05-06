@@ -8,10 +8,13 @@ public class GameManager : MonoBehaviour
     public GameObject mainCam;
 
     public bool runOnce = true;
+    public bool videoEnd = false;
 
     public GameObject shockwave;
 
     public GameObject miniShockwave;
+
+    public GameObject videoPlayer;
 
     public GameObject egoShip;
 
@@ -66,7 +69,14 @@ public class GameManager : MonoBehaviour
     System.Collections.IEnumerator SpawnFleet()
     {
         
-        yield return new WaitForSeconds(100.0f);
+        yield return new WaitForSeconds(98.5f);
+        AudioSource audio = this.GetComponent<AudioSource>();
+        audio.Play();
+        videoEnd = true;
+        yield return new WaitForSeconds(1.0f);
+        videoPlayer.SetActive(false);
+        
+        yield return new WaitForSeconds(5.0f);
         GameObject shockwaveObj1 = Instantiate(miniShockwave, fleet1.transform.position, fleet1.transform.rotation);
         Destroy(shockwaveObj1.gameObject, 3);
         fleet1.SetActive(true);

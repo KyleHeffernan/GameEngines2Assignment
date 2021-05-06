@@ -3,7 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+class IdleState : State
+{
+    public override void Think()
+    {
+        
+        if(owner.GetComponent<MilanoController>().canvas.activeSelf == false)
+        {
+            owner.ChangeState(new WaitState());
+        }
 
+    }
+
+}
 class WaitState : State
 {
     public override void Enter()
