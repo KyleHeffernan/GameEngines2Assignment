@@ -129,15 +129,15 @@ public class GameManager : MonoBehaviour
         
         mainCam.GetComponent<CameraFollow>().enabled = true;
 
-        AudioSource audio = this.GetComponent<AudioSource>();
-        audio.Stop();
 
     }
 
     System.Collections.IEnumerator EndScene()
     {
-        yield return new WaitForSeconds(2.0f);
         
+        yield return new WaitForSeconds(1.0f);
+        AudioSource audio = this.GetComponent<AudioSource>();
+        audio.Stop();
         videoPlayer.SetActive(true);
         videoPlayer2.SetActive(true);
         rawimage1.SetActive(false);
