@@ -8,7 +8,7 @@ class IdleState : State
     public override void Think()
     {
         
-        if(owner.GetComponent<MilanoController>().canvas.activeSelf == false)
+        if(owner.GetComponent<MilanoController>().videoplayer.activeSelf == false)
         {
             owner.ChangeState(new WaitState());
         }
@@ -26,13 +26,7 @@ class WaitState : State
 
     public override void Think()
     {
-        /*
-        MeshCollider milanoCollider = owner.GetComponent<MeshCollider>();
-        if(milanoCollider.isTrigger == true)
-        {
-            owner.ChangeState(new FleeState());
-        }
-        */
+        
         
         if(owner.GetComponent<MilanoController>().shot == true)
         {

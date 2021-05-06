@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject videoPlayer;
 
+    public GameObject videoPlayer2;
+
+    public GameObject rawimage2;
+
     public GameObject egoShip;
 
     public GameObject milano;
@@ -41,6 +45,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         StartCoroutine(StartScene());
 
     }
@@ -50,9 +55,15 @@ public class GameManager : MonoBehaviour
 
         if(milano.transform.position.z < 330)
         {
+            /*
+            if(this.GetComponent<AudioSource>().volume > 0)
+            {
+                this.GetComponent<AudioSource>().volume -=1;
+            }
+            */
+
             if(runOnce1 == true)
             {
-                Debug.Log("yes");
                 StartCoroutine(StartAction());
                 runOnce1 = false;
             }
@@ -71,12 +82,11 @@ public class GameManager : MonoBehaviour
             {
                 GameObject shockwaveObj = Instantiate(shockwave, egoShip.transform.position, egoShip.transform.rotation);
                 Destroy(shockwaveObj.gameObject, 3);
+                StartCoroutine(EndScene());
                 runOnce = false;
             }
 
         }
-
-        
 
     }
 
@@ -95,6 +105,7 @@ public class GameManager : MonoBehaviour
 
     System.Collections.IEnumerator StartAction()
     {
+
         
         GameObject shockwaveObj1 = Instantiate(miniShockwave, fleet1.transform.position, fleet1.transform.rotation);
         Destroy(shockwaveObj1.gameObject, 3);
@@ -134,6 +145,17 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         
         mainCam.GetComponent<CameraFollow>().enabled = true;
+
+        AudioSource audio = this.GetComponent<AudioSource>();
+        audio.Stop();
+
+    }
+
+    System.Collections.IEnumerator EndScene()
+    {
+        yield return new WaitForSeconds(2.0f);
+        rawimage2.SetActive(true);
+        videoPlayer2.SetActive(true);
 
     }
 
