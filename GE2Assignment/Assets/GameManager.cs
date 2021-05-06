@@ -4,44 +4,31 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private bool runOnce = true;
+    private bool runOnce1 = true;
+
+
     public GameObject cameraEndPos;
     public GameObject mainCam;
-
-    public bool runOnce = true;
-
-    public bool runOnce1 = true;
-    public bool videoEnd = false;
-
-    public GameObject shockwave;
-
-    public GameObject miniShockwave;
-
     public GameObject videoPlayer;
-
     public GameObject videoPlayer2;
-
-    
-
     public GameObject rawimage1;
     public GameObject rawimage2;
 
+
     public GameObject egoShip;
-
     public GameObject milano;
-
     public GameObject fleet1;
-
     public GameObject fleet2;
-
     public GameObject fleet3;
-
     public GameObject fleet4;
-
     public GameObject fleet5;
-
     public GameObject fleet6;
-
     public GameObject fleet7;
+
+
+    public GameObject shockwave;
+    public GameObject miniShockwave;
 
 
 
@@ -58,13 +45,6 @@ public class GameManager : MonoBehaviour
 
         if(milano.transform.position.z < 330)
         {
-            /*
-            if(this.GetComponent<AudioSource>().volume > 0)
-            {
-                this.GetComponent<AudioSource>().volume -=1;
-            }
-            */
-
             if(runOnce1 == true)
             {
                 StartCoroutine(StartAction());
@@ -100,7 +80,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(98.5f);
         AudioSource audio = this.GetComponent<AudioSource>();
         audio.Play();
-        videoEnd = true;
+        
         yield return new WaitForSeconds(0.5f);
         videoPlayer.SetActive(false);
 
