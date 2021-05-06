@@ -43380,6 +43380,7 @@ MonoBehaviour:
   miniShockwave: {fileID: 5372222775336739699, guid: bc44646a4f11f1d4ea72f6ce0830b3a4, type: 3}
   videoPlayer: {fileID: 207375530}
   videoPlayer2: {fileID: 280085728}
+  rawimage1: {fileID: 1119777870}
   rawimage2: {fileID: 1457021217}
   egoShip: {fileID: 1365872188}
   milano: {fileID: 285654489}

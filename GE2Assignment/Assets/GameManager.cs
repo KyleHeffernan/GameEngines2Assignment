@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject videoPlayer2;
 
+    
+
+    public GameObject rawimage1;
     public GameObject rawimage2;
 
     public GameObject egoShip;
@@ -154,8 +157,11 @@ public class GameManager : MonoBehaviour
     System.Collections.IEnumerator EndScene()
     {
         yield return new WaitForSeconds(2.0f);
-        rawimage2.SetActive(true);
+        
+        videoPlayer.SetActive(true);
         videoPlayer2.SetActive(true);
+        rawimage1.SetActive(false);
+        rawimage2.SetActive(true);
 
     }
 
