@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioSource songClip;
+
+    public AudioSource voiceClip;
+
     private bool runOnce = true;
     private bool runOnce1 = true;
+
+    private bool runOnce2 = true;
 
 
     public GameObject cameraEndPos;
@@ -43,12 +49,22 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if(milano.transform.position.z < 400)
+        if(milano.transform.position.z < 600)
         {
             if(runOnce1 == true)
             {
                 StartCoroutine(StartAction());
                 runOnce1 = false;
+            }
+        }
+
+        if(milano.transform.position.z < 560)
+        {
+            if(runOnce2 == true)
+            {
+                
+                voiceClip.Play();
+                runOnce2 = false;
             }
         }
 
@@ -78,8 +94,9 @@ public class GameManager : MonoBehaviour
     {
         
         yield return new WaitForSeconds(98.5f);
-        AudioSource audio = this.GetComponent<AudioSource>();
-        audio.Play();
+        //AudioSource audio = this.GetComponent<AudioSource>();
+        //audio.Play();
+        songClip.Play();
         
         yield return new WaitForSeconds(0.5f);
         videoPlayer.SetActive(false);
@@ -123,10 +140,10 @@ public class GameManager : MonoBehaviour
         GameObject shockwaveObj7 = Instantiate(miniShockwave, fleet7.transform.position, fleet7.transform.rotation);
         Destroy(shockwaveObj7.gameObject, 3);
         fleet7.SetActive(true);
-        mainCam.transform.parent = null;
-
-        yield return new WaitForSeconds(1.0f);
         
+
+        yield return new WaitForSeconds(15.5f);
+        mainCam.transform.parent = null;
         mainCam.GetComponent<CameraFollow>().enabled = true;
 
 
@@ -135,12 +152,14 @@ public class GameManager : MonoBehaviour
     System.Collections.IEnumerator EndScene()
     {
         
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.6f);
         AudioSource audio = this.GetComponent<AudioSource>();
         audio.Stop();
-        videoPlayer.SetActive(true);
-        videoPlayer2.SetActive(true);
         rawimage1.SetActive(false);
+        videoPlayer2.SetActive(true);
+        videoPlayer.SetActive(true);
+        
+        yield return new WaitForSeconds(0.1f);
         rawimage2.SetActive(true);
 
     }

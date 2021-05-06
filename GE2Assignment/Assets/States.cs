@@ -21,7 +21,7 @@ class WaitState : State
     public override void Enter()
     {
         owner.GetComponent<FollowPath>().enabled = true;
-        owner.GetComponent<Boid>().maxSpeed = 20;
+        owner.GetComponent<Boid>().maxSpeed = 10;
     }
 
     public override void Think()
@@ -92,7 +92,7 @@ class PursueShip : State
     {
         
         Vector3 toEnemy = owner.GetComponent<AttackShip>().milano.transform.position - owner.transform.position;
-        if (Vector3.Angle(owner.transform.forward, toEnemy) < 50 && toEnemy.magnitude < 200)
+        if (Vector3.Angle(owner.transform.forward, toEnemy) < 50 && toEnemy.magnitude < 400)
         {
             AudioSource audio = owner.GetComponent<AudioSource>();
             audio.Play();
