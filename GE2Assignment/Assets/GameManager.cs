@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if(milano.transform.position.z < 330)
+        if(milano.transform.position.z < 400)
         {
             if(runOnce1 == true)
             {
