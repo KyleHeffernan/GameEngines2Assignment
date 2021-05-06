@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public GameObject mainCam;
 
     public bool runOnce = true;
+
+    public bool runOnce1 = true;
     public bool videoEnd = false;
 
     public GameObject shockwave;
@@ -39,12 +41,30 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnFleet());
+        StartCoroutine(StartScene());
 
     }
 
     void Update()
     {
+
+        if(milano.transform.position.z < 330)
+        {
+            if(runOnce1 == true)
+            {
+                Debug.Log("yes");
+                StartCoroutine(StartAction());
+                runOnce1 = false;
+            }
+        }
+
+        if(milano.transform.position.z < -550)
+        {
+            mainCam.GetComponent<CameraFollow>().enabled = false;
+            mainCam.transform.position = cameraEndPos.transform.position;
+            mainCam.transform.rotation = cameraEndPos.transform.rotation;
+        }
+
         if(milano.transform.position.z < -640)
         {
             if(runOnce == true)
@@ -56,17 +76,12 @@ public class GameManager : MonoBehaviour
 
         }
 
-        if(milano.transform.position.z < -550)
-        {
-            mainCam.GetComponent<CameraFollow>().enabled = false;
-            mainCam.transform.position = cameraEndPos.transform.position;
-            mainCam.transform.rotation = cameraEndPos.transform.rotation;
-        }
+        
 
     }
 
 
-    System.Collections.IEnumerator SpawnFleet()
+    System.Collections.IEnumerator StartScene()
     {
         
         yield return new WaitForSeconds(98.5f);
@@ -75,8 +90,11 @@ public class GameManager : MonoBehaviour
         videoEnd = true;
         yield return new WaitForSeconds(0.5f);
         videoPlayer.SetActive(false);
-        
-        yield return new WaitForSeconds(5.0f);
+
+    }
+
+    System.Collections.IEnumerator StartAction()
+    {
         
         GameObject shockwaveObj1 = Instantiate(miniShockwave, fleet1.transform.position, fleet1.transform.rotation);
         Destroy(shockwaveObj1.gameObject, 3);
@@ -116,8 +134,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         
         mainCam.GetComponent<CameraFollow>().enabled = true;
-
-        
 
     }
 
