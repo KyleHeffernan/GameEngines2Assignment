@@ -35317,6 +35317,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   runOnce: 1
   shockwave: {fileID: 5372222775336739699, guid: 9886ffaf03860214e89148fddf327c48, type: 3}
+  miniShockwave: {fileID: 5372222775336739699, guid: bc44646a4f11f1d4ea72f6ce0830b3a4, type: 3}
   egoShip: {fileID: 1365872188}
   milano: {fileID: 285654489}
   fleet1: {fileID: 382549168}
@@ -38676,6 +38677,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446090, guid: 84cc3cd234dfc9d4d9d2e92c0eb0af75, type: 3}
   m_PrefabInstance: {fileID: 2024967099}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2031778356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2031778357}
+  m_Layer: 0
+  m_Name: FleetSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2031778357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031778356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.2, y: 0, z: 359.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2033044891
 PrefabInstance:
   m_ObjectHideFlags: 0

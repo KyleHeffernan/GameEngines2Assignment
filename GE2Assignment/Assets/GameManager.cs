@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject shockwave;
 
+    public GameObject miniShockwave;
+
     public GameObject egoShip;
 
     public GameObject milano;
@@ -51,7 +53,7 @@ public class GameManager : MonoBehaviour
 
         }
 
-        if(milano.transform.position.z < -600)
+        if(milano.transform.position.z < -550)
         {
             mainCam.GetComponent<CameraFollow>().enabled = false;
             mainCam.transform.position = cameraEndPos.transform.position;
@@ -63,20 +65,42 @@ public class GameManager : MonoBehaviour
 
     System.Collections.IEnumerator SpawnFleet()
     {
+        
         yield return new WaitForSeconds(3.0f);
+        GameObject shockwaveObj1 = Instantiate(miniShockwave, fleet1.transform.position, fleet1.transform.rotation);
+        Destroy(shockwaveObj1.gameObject, 3);
         fleet1.SetActive(true);
+
         yield return new WaitForSeconds(0.3f);
+        GameObject shockwaveObj2 = Instantiate(miniShockwave, fleet2.transform.position, fleet2.transform.rotation);
+        Destroy(shockwaveObj2.gameObject, 3);
         fleet2.SetActive(true);
+
         yield return new WaitForSeconds(0.3f);
+        GameObject shockwaveObj3 = Instantiate(miniShockwave, fleet3.transform.position, fleet3.transform.rotation);
+        Destroy(shockwaveObj3.gameObject, 3);
         fleet3.SetActive(true);
+
         yield return new WaitForSeconds(0.3f);
+        GameObject shockwaveObj4 = Instantiate(miniShockwave, fleet4.transform.position, fleet4.transform.rotation);
+        Destroy(shockwaveObj4.gameObject, 3);
         fleet4.SetActive(true);
+
         yield return new WaitForSeconds(0.3f);
+        GameObject shockwaveObj5 = Instantiate(miniShockwave, fleet5.transform.position, fleet5.transform.rotation);
+        Destroy(shockwaveObj5.gameObject, 3);
         fleet5.SetActive(true);
+
         yield return new WaitForSeconds(0.3f);
+        GameObject shockwaveObj6 = Instantiate(miniShockwave, fleet6.transform.position, fleet6.transform.rotation);
+        Destroy(shockwaveObj6.gameObject, 3);
         fleet6.SetActive(true);
+
         yield return new WaitForSeconds(0.3f);
+        GameObject shockwaveObj7 = Instantiate(miniShockwave, fleet7.transform.position, fleet7.transform.rotation);
+        Destroy(shockwaveObj7.gameObject, 3);
         fleet7.SetActive(true);
+
         yield return new WaitForSeconds(3.0f);
         mainCam.GetComponent<CameraFollow>().enabled = true;
 
