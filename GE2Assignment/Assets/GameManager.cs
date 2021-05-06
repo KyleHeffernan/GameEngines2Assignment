@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
     System.Collections.IEnumerator SpawnFleet()
     {
         
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(100.0f);
         GameObject shockwaveObj1 = Instantiate(miniShockwave, fleet1.transform.position, fleet1.transform.rotation);
         Destroy(shockwaveObj1.gameObject, 3);
         fleet1.SetActive(true);
