@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public GameObject fleet5;
     public GameObject fleet6;
     public GameObject fleet7;
+    public GameObject fleet8;
+    public GameObject fleet9;
 
 
     public GameObject shockwave;
@@ -121,25 +123,35 @@ public class GameManager : MonoBehaviour
         Destroy(shockwaveObj3.gameObject, 3);
         fleet3.SetActive(true);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         GameObject shockwaveObj4 = Instantiate(miniShockwave, fleet4.transform.position, fleet4.transform.rotation);
         Destroy(shockwaveObj4.gameObject, 3);
         fleet4.SetActive(true);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         GameObject shockwaveObj5 = Instantiate(miniShockwave, fleet5.transform.position, fleet5.transform.rotation);
         Destroy(shockwaveObj5.gameObject, 3);
         fleet5.SetActive(true);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         GameObject shockwaveObj6 = Instantiate(miniShockwave, fleet6.transform.position, fleet6.transform.rotation);
         Destroy(shockwaveObj6.gameObject, 3);
         fleet6.SetActive(true);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         GameObject shockwaveObj7 = Instantiate(miniShockwave, fleet7.transform.position, fleet7.transform.rotation);
         Destroy(shockwaveObj7.gameObject, 3);
         fleet7.SetActive(true);
+
+        yield return new WaitForSeconds(0.2f);
+        GameObject shockwaveObj8 = Instantiate(miniShockwave, fleet8.transform.position, fleet8.transform.rotation);
+        Destroy(shockwaveObj8.gameObject, 3);
+        fleet8.SetActive(true);
+
+        yield return new WaitForSeconds(0.2f);
+        GameObject shockwaveObj9 = Instantiate(miniShockwave, fleet9.transform.position, fleet9.transform.rotation);
+        Destroy(shockwaveObj9.gameObject, 3);
+        fleet9.SetActive(true);
         
 
         yield return new WaitForSeconds(15.5f);
