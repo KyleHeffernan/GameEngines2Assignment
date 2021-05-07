@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class AttackShip : MonoBehaviour
 {
+    //The bullet prefeb used by all attack ships
     public GameObject bullet;
-
+    //So all ships have a reference to the milano
     public GameObject milano;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         

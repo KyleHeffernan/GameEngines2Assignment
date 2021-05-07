@@ -4,34 +4,28 @@ using UnityEngine;
 
 public class Boid : MonoBehaviour
 {
-    List<SteeringBehaviour> behaviours = new List<SteeringBehaviour>();
-
     public Vector3 force = Vector3.zero;
     public Vector3 acceleration = Vector3.zero;
     public Vector3 velocity = Vector3.zero;
     public float mass = 1;
 
+
     [Range(0.0f, 10.0f)]
     public float damping = 0.01f;
+
 
     [Range(0.0f, 1.0f)]
     public float banking = 0.1f;
     public float maxSpeed = 5.0f;
     public float maxForce = 10.0f;
 
-    public void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, transform.position + velocity);
 
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, transform.position + force * 10);
-    }
+    List<SteeringBehaviour> behaviours = new List<SteeringBehaviour>();
 
-    // Use this for initialization
+    // For initializing boid
     void Start()
     {
-
+        //Getting any attached steering behaviours and adding them to list
         SteeringBehaviour[] behaviours = GetComponents<SteeringBehaviour>();
 
         foreach (SteeringBehaviour b in behaviours)
@@ -56,7 +50,8 @@ public class Boid : MonoBehaviour
 
         
         if (distance > 0)
-        {        
+        {
+            //Slowing speed down before target is reached
             float ramped = maxSpeed * (distance / slowingDistance);
 
             float clamped = Mathf.Min(ramped, maxSpeed);
@@ -81,7 +76,7 @@ public class Boid : MonoBehaviour
         // 3. Truncated
         // 4. Running sum
 
-
+        //Calculating for active steering behaviours
         foreach (SteeringBehaviour b in behaviours)
         {
             if (b.isActiveAndEnabled)
