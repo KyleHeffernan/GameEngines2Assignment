@@ -8,10 +8,12 @@ public class GameManager : MonoBehaviour
 
     public AudioSource voiceClip;
 
+    public AudioSource voiceClip2;
+
     private bool runOnce = true;
     private bool runOnce1 = true;
-
     private bool runOnce2 = true;
+    private bool runOnce3 = true;
 
 
     public GameObject cameraEndPos;
@@ -74,6 +76,16 @@ public class GameManager : MonoBehaviour
                 
                 voiceClip.Play();
                 runOnce2 = false;
+            }
+        }
+
+        if(milano.transform.position.z < 260)
+        {
+            if(runOnce3 == true)
+            {
+                
+                voiceClip2.Play();
+                runOnce3 = false;
             }
         }
 
