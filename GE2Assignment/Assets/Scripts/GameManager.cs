@@ -39,12 +39,20 @@ public class GameManager : MonoBehaviour
     public GameObject fleet7;
     public GameObject fleet8;
     public GameObject fleet9;
-
     public GameObject sentrySquad1;
+
+    public Transform egoShot1;
+    public Transform egoShot2;
+    public Transform egoShot3;
+    public Transform egoShot4;
+    public Transform egoShot5;
+    public Transform egoShot6;
 
 
     public GameObject shockwave;
     public GameObject miniShockwave;
+
+    public GameObject egoShot;
 
 
 
@@ -114,6 +122,21 @@ public class GameManager : MonoBehaviour
             {
                 GameObject shockwaveObj = Instantiate(shockwave, egoShip.transform.position, egoShip.transform.rotation);
                 Destroy(shockwaveObj.gameObject, 3);
+
+                GameObject egoShotEffect1 = Instantiate(egoShot, egoShot1.transform.position, egoShot1.transform.rotation);
+                Destroy(egoShotEffect1.gameObject, 3);
+                GameObject egoShotEffect2 = Instantiate(egoShot, egoShot2.transform.position, egoShot2.transform.rotation);
+                Destroy(egoShotEffect2.gameObject, 3);
+                GameObject egoShotEffect3 = Instantiate(egoShot, egoShot3.transform.position, egoShot3.transform.rotation);
+                Destroy(egoShotEffect3.gameObject, 3);
+                GameObject egoShotEffect4 = Instantiate(egoShot, egoShot4.transform.position, egoShot4.transform.rotation);
+                Destroy(egoShotEffect4.gameObject, 3);
+                GameObject egoShotEffect5 = Instantiate(egoShot, egoShot5.transform.position, egoShot5.transform.rotation);
+                Destroy(egoShotEffect5.gameObject, 3);
+                GameObject egoShotEffect6 = Instantiate(egoShot, egoShot6.transform.position, egoShot6.transform.rotation);
+                Destroy(egoShotEffect6.gameObject, 3);
+
+
                 StartCoroutine(EndScene());
                 runOnce = false;
             }
@@ -197,14 +220,15 @@ public class GameManager : MonoBehaviour
         GameObject shockwaveObj10 = Instantiate(miniShockwave, sentrySquad1.transform.position, sentrySquad1.transform.rotation);
         Destroy(shockwaveObj10.gameObject, 3);
         sentrySquad1.SetActive(true);
+        songClip.Stop();
     }
 
     System.Collections.IEnumerator EndScene()
     {
         
-        yield return new WaitForSeconds(1.2f);
-        AudioSource audio = this.GetComponent<AudioSource>();
-        audio.Stop();
+        yield return new WaitForSeconds(1.85f);
+        //AudioSource audio = this.GetComponent<AudioSource>();
+        //audio.Stop();
         rawimage1.SetActive(false);
         videoPlayer2.SetActive(true);
         videoPlayer.SetActive(true);
