@@ -58,6 +58,27 @@ class FleeState: State
             GameObject bullet = GameObject.Instantiate(owner.GetComponent<AttackShip>().bullet, owner.transform.position + owner.GetComponent<MilanoController>().bulletSpawn.transform.forward * 2, owner.GetComponent<MilanoController>().bulletSpawn.transform.rotation);       
         }
 
+        if(owner.transform.position.z < -500)
+        {
+            owner.ChangeState(new AlmostEscapedState());
+
+        }
+    }
+
+    
+
+}
+
+class AlmostEscapedState : State
+{
+    public override void Enter()
+    {
+        owner.GetComponent<Boid>().maxSpeed = 30;
+    }
+
+    public override void Think()
+    {
+
         if(owner.transform.position.z < -660)
         {
             owner.ChangeState(new EscapedState());
@@ -76,6 +97,8 @@ class EscapedState : State
 {
 
 }
+
+
 
 class PursueShip : State
 {

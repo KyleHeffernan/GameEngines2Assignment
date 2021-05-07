@@ -10,10 +10,13 @@ public class GameManager : MonoBehaviour
 
     public AudioSource voiceClip2;
 
+    public AudioSource voiceClip3;
+
     private bool runOnce = true;
     private bool runOnce1 = true;
     private bool runOnce2 = true;
     private bool runOnce3 = true;
+    private bool runOnce4 = true;
 
 
     public GameObject cameraEndPos;
@@ -89,8 +92,14 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(milano.transform.position.z < -550)
+        if(milano.transform.position.z < -500)
         {
+            if(runOnce4 == true)
+            {
+                
+                voiceClip3.Play();
+                runOnce4 = false;
+            }
             mainCam.GetComponent<CameraFollow>().enabled = false;
             mainCam.transform.position = cameraEndPos.transform.position;
             mainCam.transform.rotation = cameraEndPos.transform.rotation;
