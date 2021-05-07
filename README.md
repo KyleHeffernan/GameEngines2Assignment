@@ -1,7 +1,24 @@
 # Space Battle Assignment
+
 Kyle Heffernan
+
 C17444434
+
 DT211C/4
+
+
+# Project Description
+This project simulates the scene in Guardians of the Galaxy 2 in which the guardians have to flee from the sovereign fleet
+after rocket steals batteries from them. The scene is fully autonomous, including the cutscenes.
+
+# Youtube Video
+Placeholder.
+
+# Instructions for use
+Run the exe file.
+
+# How it works
+Placeholder.
 
 # STORYBOARD FOR THE SCENE
 
@@ -31,18 +48,11 @@ They leave the asteroid field but are immediately surrounded by the fleet again 
 ![Screenshot](/images/Screenshot_12.png)
 A mysterious ship appears and with a flash, blows up the entire fleet, saving the Guardians.
 
-
-
-# Project Description
-
-
-# Instructions for use
-
-
-# How it works
-
-
+# What am I most proud of
+Placeholder.
 
 # References
+- Unity Documentation
+- Placeholder
 
 
