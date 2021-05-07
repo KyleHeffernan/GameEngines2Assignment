@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject cameraEndPos;
     public GameObject mainCam;
+    public GameObject moveCam;
     public GameObject videoPlayer;
     public GameObject videoPlayer2;
     public GameObject rawimage1;
@@ -50,6 +51,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if(milano.transform.position.z < 759 && milano.transform.position.z > 450)
+        {
+            mainCam.transform.position = Vector3.Lerp(mainCam.transform.position, moveCam.transform.position, Time.deltaTime * 0.5f);
+            mainCam.transform.rotation = Quaternion.Lerp(mainCam.transform.rotation, moveCam.transform.rotation, Time.deltaTime * 0.5f);
+        }
+        
 
         if(milano.transform.position.z < 600)
         {
@@ -102,6 +109,7 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitForSeconds(0.5f);
         videoPlayer.SetActive(false);
+
 
     }
 
