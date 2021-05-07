@@ -33,28 +33,6 @@ public class ObstacleAvoidance : SteeringBehaviour
         StartCoroutine(UpdateSideFeelers());
     }
 
-    public void OnDrawGizmos()
-    {
-        if (isActiveAndEnabled)
-        {
-            foreach (FeelerInfo feeler in feelers)
-            {
-                Gizmos.color = Color.gray;
-                if (Application.isPlaying)
-                {
-                    Gizmos.DrawLine(transform.position, feeler.point);
-                }
-                if (feeler.collided)
-                {
-                    Gizmos.color = Color.yellow;
-                    Gizmos.DrawLine(feeler.point, feeler.point + (feeler.normal * 5));
-                    Gizmos.color = Color.red;
-                    Gizmos.DrawLine(feeler.point, feeler.point + force);
-                }
-            }
-        }
-    }
-
     Vector3 lerpedForce = Vector3.zero;
     public override Vector3 Calculate()
     {
