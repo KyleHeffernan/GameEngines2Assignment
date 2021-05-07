@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(milano.transform.position.z < -500)
+        if(milano.transform.position.z < -400)
         {
             if(runOnce4 == true)
             {
@@ -191,7 +191,7 @@ public class GameManager : MonoBehaviour
     System.Collections.IEnumerator EndScene()
     {
         
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1.2f);
         AudioSource audio = this.GetComponent<AudioSource>();
         audio.Stop();
         rawimage1.SetActive(false);
