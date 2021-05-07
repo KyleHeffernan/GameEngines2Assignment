@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour
     {
         if(milano.transform.position.z < 759 && milano.transform.position.z > 450)
         {
-            mainCam.transform.position = Vector3.Lerp(mainCam.transform.position, moveCam.transform.position, Time.deltaTime * 0.5f);
-            mainCam.transform.rotation = Quaternion.Lerp(mainCam.transform.rotation, moveCam.transform.rotation, Time.deltaTime * 0.5f);
+            mainCam.transform.position = Vector3.Lerp(mainCam.transform.position, moveCam.transform.position, Time.deltaTime * 0.1f);
+            mainCam.transform.rotation = Quaternion.Lerp(mainCam.transform.rotation, moveCam.transform.rotation, Time.deltaTime * 0.1f);
         }
         
 

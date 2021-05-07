@@ -53,7 +53,7 @@ class FleeState: State
     public override void Think()
     {
         Vector3 toEnemy = owner.GetComponent<AttackShip>().milano.transform.position - owner.transform.position;
-        if (Vector3.Angle(-owner.transform.forward, toEnemy) < 200 && toEnemy.magnitude < 450)
+        if (Vector3.Angle(-owner.transform.forward, toEnemy) < 220 && toEnemy.magnitude < 550)
         {
             //Vector3 flipped = owner.transform.InverseTransformDirection(Vector3.forward);
             GameObject bullet = GameObject.Instantiate(owner.GetComponent<AttackShip>().bullet, owner.transform.position + owner.GetComponent<MilanoController>().bulletSpawn.transform.forward * 2, owner.GetComponent<MilanoController>().bulletSpawn.transform.rotation);       
