@@ -8,6 +8,7 @@ public class RandomRotator : MonoBehaviour
 
     void Start()
     {
+        //Gives the asteroids some random rotation
         GetComponent<Rigidbody>().angularVelocity = Random.insideUnitSphere * tumble;
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
+//Abstract class for steering behaviours
 [RequireComponent (typeof(Boid))]
 public abstract class SteeringBehaviour:MonoBehaviour
 {
@@ -12,7 +13,6 @@ public abstract class SteeringBehaviour:MonoBehaviour
 
     [HideInInspector]
     public Boid boid;
-
     public void Awake()
     {
         boid = GetComponent<Boid>();

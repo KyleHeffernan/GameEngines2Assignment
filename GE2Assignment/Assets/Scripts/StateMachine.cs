@@ -20,7 +20,8 @@ public class StateMachine : MonoBehaviour {
     
     public int updatesPerSecond = 5;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         
 	}
 
@@ -62,7 +63,6 @@ public class StateMachine : MonoBehaviour {
 
     public void ChangeState(State newState)
     {
-        
         if (currentState != null)
         {
             currentState.Exit();
@@ -73,7 +73,6 @@ public class StateMachine : MonoBehaviour {
         }
         currentState = newState;
         currentState.owner = this;
-        //Debug.Log(currentState.GetType());
         currentState.Enter();
     }
 
