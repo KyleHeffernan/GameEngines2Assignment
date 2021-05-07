@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     public GameObject fleet7;
     public GameObject fleet8;
     public GameObject fleet9;
+    public GameObject fleet10;
+    public GameObject fleet11;
     public GameObject sentrySquad1;
 
     //Positions and objects for effects
@@ -169,12 +171,12 @@ public class GameManager : MonoBehaviour
         Destroy(shockwaveObj1.gameObject, 3);
         fleet1.SetActive(true);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         GameObject shockwaveObj2 = Instantiate(miniShockwave, fleet2.transform.position, fleet2.transform.rotation);
         Destroy(shockwaveObj2.gameObject, 3);
         fleet2.SetActive(true);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         GameObject shockwaveObj3 = Instantiate(miniShockwave, fleet3.transform.position, fleet3.transform.rotation);
         Destroy(shockwaveObj3.gameObject, 3);
         fleet3.SetActive(true);
@@ -208,6 +210,16 @@ public class GameManager : MonoBehaviour
         GameObject shockwaveObj9 = Instantiate(miniShockwave, fleet9.transform.position, fleet9.transform.rotation);
         Destroy(shockwaveObj9.gameObject, 3);
         fleet9.SetActive(true);
+
+        yield return new WaitForSeconds(0.1f);
+        GameObject shockwaveObj15 = Instantiate(miniShockwave, fleet10.transform.position, fleet10.transform.rotation);
+        Destroy(shockwaveObj15.gameObject, 3);
+        fleet10.SetActive(true);
+
+        yield return new WaitForSeconds(0.1f);
+        GameObject shockwaveObj16 = Instantiate(miniShockwave, fleet11.transform.position, fleet11.transform.rotation);
+        Destroy(shockwaveObj16.gameObject, 3);
+        fleet11.SetActive(true);
         
         //After the ships have all spawned and some time has passed, switch the camera to use the following script
         yield return new WaitForSeconds(15.5f);
