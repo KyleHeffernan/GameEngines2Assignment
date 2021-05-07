@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
     public GameObject fleet8;
     public GameObject fleet9;
 
+    public GameObject sentrySquad1;
+
 
     public GameObject shockwave;
     public GameObject miniShockwave;
@@ -96,6 +98,7 @@ public class GameManager : MonoBehaviour
         {
             if(runOnce4 == true)
             {
+                StartCoroutine(SpawnSentries());
                 
                 voiceClip3.Play();
                 runOnce4 = false;
@@ -186,6 +189,14 @@ public class GameManager : MonoBehaviour
         mainCam.GetComponent<CameraFollow>().enabled = true;
 
 
+    }
+
+    System.Collections.IEnumerator SpawnSentries()
+    {
+        yield return new WaitForSeconds(0.0f);
+        GameObject shockwaveObj10 = Instantiate(miniShockwave, sentrySquad1.transform.position, sentrySquad1.transform.rotation);
+        Destroy(shockwaveObj10.gameObject, 3);
+        sentrySquad1.SetActive(true);
     }
 
     System.Collections.IEnumerator EndScene()
