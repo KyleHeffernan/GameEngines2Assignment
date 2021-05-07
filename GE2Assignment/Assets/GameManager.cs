@@ -193,7 +193,7 @@ public class GameManager : MonoBehaviour
 
     System.Collections.IEnumerator SpawnSentries()
     {
-        yield return new WaitForSeconds(0.0f);
+        yield return new WaitForSeconds(1.0f);
         GameObject shockwaveObj10 = Instantiate(miniShockwave, sentrySquad1.transform.position, sentrySquad1.transform.rotation);
         Destroy(shockwaveObj10.gameObject, 3);
         sentrySquad1.SetActive(true);
