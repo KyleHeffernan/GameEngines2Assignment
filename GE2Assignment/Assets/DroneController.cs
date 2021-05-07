@@ -33,9 +33,7 @@ public class DroneController : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("drone was hit");
         DestroyShip();
-        
     }
 
     public void DestroyShip()

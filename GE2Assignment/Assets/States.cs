@@ -55,15 +55,11 @@ class FleeState: State
         Vector3 toEnemy = owner.GetComponent<AttackShip>().milano.transform.position - owner.transform.position;
         if (Vector3.Angle(-owner.transform.forward, toEnemy) < 220 && toEnemy.magnitude < 550)
         {
-            //Vector3 flipped = owner.transform.InverseTransformDirection(Vector3.forward);
             GameObject bullet = GameObject.Instantiate(owner.GetComponent<AttackShip>().bullet, owner.transform.position + owner.GetComponent<MilanoController>().bulletSpawn.transform.forward * 2, owner.GetComponent<MilanoController>().bulletSpawn.transform.rotation);       
         }
 
-        //Debug.Log(owner.GetComponent<FollowPath>().nextWaypoint);
-        //Debug.Log(owner.transform.position.z);
         if(owner.transform.position.z < -660)
         {
-            //Debug.Log("Destination reached");
             owner.ChangeState(new EscapedState());
 
         }
@@ -101,7 +97,6 @@ class PursueShip : State
         
         if(owner.GetComponent<AttackShip>().milano.transform.position.z < -660)
         {
-            //Debug.Log("Destination reached");
             owner.ChangeState(new DeathState());
 
         }
@@ -111,7 +106,7 @@ class PursueShip : State
 
     public override void Exit()
     {
-        //owner.GetComponent<FollowPath>().enabled = false;
+        
     }
 }
 

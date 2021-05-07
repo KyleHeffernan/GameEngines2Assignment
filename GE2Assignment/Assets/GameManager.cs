@@ -115,8 +115,6 @@ public class GameManager : MonoBehaviour
     {
         
         yield return new WaitForSeconds(98.5f);
-        //AudioSource audio = this.GetComponent<AudioSource>();
-        //audio.Play();
         songClip.Play();
         
         yield return new WaitForSeconds(0.5f);
