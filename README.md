@@ -9,10 +9,13 @@ DT211C/4
 
 # Project Description
 This project simulates the scene in Guardians of the Galaxy 2 in which the guardians have to flee from the sovereign fleet
-after rocket steals batteries from them. The scene is fully autonomous, including the cutscenes.
+after rocket steals batteries from them.
+
+The scene is fully autonomous, including the cutscenes.
 
 # Youtube Video
 Placeholder.
+[![Video](https://youtu.be/z8uOI9DQrOA/0.jpg)](https://youtu.be/z8uOI9DQrOA)
 
 # Instructions for use
 Run the exe file.
