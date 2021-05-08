@@ -15,9 +15,7 @@ The scene is fully autonomous, including the cutscenes.
 
 # Youtube Video
 
-[![Video](https://youtu.be/z8uOI9DQrOA/0.jpg)](https://youtu.be/z8uOI9DQrOA)
-
-[![Video](https://www.youtube.com/watch?v=z8uOI9DQrOA&ab_channel=KyleHeffernan/0.jpg)](https://www.youtube.com/watch?v=z8uOI9DQrOA&ab_channel=KyleHeffernan)
+[![Video](http://i3.ytimg.com/vi/z8uOI9DQrOA/maxresdefault.jpg)](https://youtu.be/z8uOI9DQrOA)
 
 
 
