@@ -15,7 +15,7 @@ Run the exe file.
 
 # How it works
 The Unity scene starts off by playing the beginning cutscene with a video player. Once this cutscene ends, the song starts playing and the milano begins moving.
-The ai in this scene is made with finite state machines, so for the milano to start moving its state is switched.
+The ai in this scene is made with finite state machines, so for the milano to start moving its state is switched. Trail renderers are used for the engines and bullets, and some post processing has been implemented to make the scene look nicer and to make the trails stand out. Ambient Occlusion makes the lighting look much better on the ships and bloom helps the lasers glow.
 
 Some camera movement is done, and once the milano reaches a certain point, a coroutine is started which spawns in the sovereign fleet and some dialogue is played.
 
@@ -62,8 +62,12 @@ The guardians have escaped from the fleet and reached the jump point after being
 # What am I most proud of
 I would say I am most proud of the transitions between the cutscenes and the unity scenes. While they aren't perfect, I am proud of how well they transition together.
 
+# Classes
+The scripts that have code from the Games Engines 2 module are State Machine, Boid, Follow Path, Obstacle Avoidance, Offset Pursue, Steering Behaviours. The rest of the scripts were written by me.
+
 # References
 - Unity Documentation
+- Stack Overflow
 - Games Engines 2 2021 Examples Github
 - [Asteroids](https://assetstore.unity.com/packages/3d/environments/asteroids-pack-84988)
 - [Particle Effects](https://assetstore.unity.com/packages/essentials/asset-packs/unity-particle-pack-5-x-73777)
